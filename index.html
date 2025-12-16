@@ -1,79 +1,352 @@
 <!DOCTYPE html>
-<html lang = "ru">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Резюме</title>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechEvents - IT мероприятия и новости</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header с фиксированным позиционированием -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="logo">
+                    <a href="index.html">
+                        <i class="fas fa-code"></i>
+                        <span>TechEvents</span>
+                    </a>
+                </div>
+                
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="active">Главная</a></li>
+                    <li><a href="#events">Мероприятия</a></li>
+                    <li><a href="#news">Новости</a></li>
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="news.html">Пример новости</a></li>
+                </ul>
+                
+                <div class="nav-actions">
+                    <button class="btn btn-login">Войти</button>
+                    <button class="btn btn-primary">Регистрация</button>
+                </div>
+                
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
 
-        <link rel="icon" type="image/png" href="icons8-favicon-48.png">
-    </head>
-    <body>
-        <header><strong><h1>Резюме: Кристина Ногачева</h1></strong></header>
-        <nav class="main-nav">
-                <a href="#Basic">Основная информация</a>
-                <a href="#Skills">Навыки</a>
-                <a href="#Education">Образование</a>
-                <a href="#Work">Опыт работы</a>
-                <a href="#Contacts">Контакты</a>
-        </nav>
-        <main>
-            <div id="Basic"><strong><h2>Основная информация</h2></strong>
-            <p><strong>ФИО: </strong>Ногачева Кристина Владимировна<br>
-            <strong>Возраст: </strong>19 лет<br>
-            <strong>Город проживания: </strong>Москва<br>
-            <strong>Целевая позиция: </strong>Junior Frontend Developer<br></p>
+    <!-- Hero секция -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">IT мероприятия и конференции 2024</h1>
+                <p class="hero-subtitle">Следите за самыми интересными событиями в мире технологий, программирования и digital-индустрии</p>
+                <div class="hero-actions">
+                    <a href="#events" class="btn btn-primary btn-large">Посмотреть мероприятия</a>
+                    <a href="#news" class="btn btn-secondary btn-large">Читать новости</a>
+                </div>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">250+</span>
+                    <span class="stat-label">Мероприятий</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">15k+</span>
+                    <span class="stat-label">Участников</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">120+</span>
+                    <span class="stat-label">Спикеров</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Блок мероприятий с Grid -->
+    <section class="events" id="events">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Ближайшие мероприятия</h2>
+                <a href="#" class="section-link">Все мероприятия <i class="fas fa-arrow-right"></i></a>
             </div>
             
-            <section id="Skills"><strong><h2>Навыки</h2></strong>
-            <table>
-                <tr>
-                    <td>Иностраные языки</td>
-                    <td>Языки программирования</td>
-                    <td>Другие профессиональные навыки</td>
-                </tr>
-                <tr>
-                    <td>Английский язык(B2)</td>
-                    <td>С++, Python, Java</td>
-                    <td>HTML, JS, CSS, Photoshop, Figma</td>
-                </tr>
-            </table>
-            </section>
+            <div class="events-grid">
+                <article class="event-card">
+                    <div class="event-date">
+                        <span class="date-day">15</span>
+                        <span class="date-month">Окт</span>
+                    </div>
+                    <div class="event-category category-conference">Конференция</div>
+                    <div class="event-image">
+                        <img src="images/1.jpg" alt="Frontend Conference 2024">
+                    </div>
+                    <div class="event-content">
+                        <h3 class="event-title">Frontend Conference 2024</h3>
+                        <p class="event-description">Крупнейшая конференция для фронтенд-разработчиков. Новые подходы, фреймворки и лучшие практики.</p>
+                        <div class="event-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> Москва, Крокус Экспо</span>
+                            <span><i class="fas fa-users"></i> 1500 участников</span>
+                        </div>
+                        <a href="#" class="btn btn-outline">Подробнее</a>
+                    </div>
+                </article>
+                
+                <article class="event-card">
+                    <div class="event-date">
+                        <span class="date-day">22</span>
+                        <span class="date-month">Окт</span>
+                    </div>
+                    <div class="event-category category-workshop">Воркшоп</div>
+                    <div class="event-image">
+                        <img src="images/2.jpg" alt="React Advanced Workshop">
+                    </div>
+                    <div class="event-content">
+                        <h3 class="event-title">React Advanced Workshop</h3>
+                        <p class="event-description">Практический воркшоп по продвинутым техникам React. State management, оптимизация и новые фичи.</p>
+                        <div class="event-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> Онлайн</span>
+                            <span><i class="fas fa-users"></i> 300 участников</span>
+                        </div>
+                        <a href="#" class="btn btn-outline">Подробнее</a>
+                    </div>
+                </article>
+                
+                <article class="event-card">
+                    <div class="event-date">
+                        <span class="date-day">05</span>
+                        <span class="date-month">Ноя</span>
+                    </div>
+                    <div class="event-category category-hackathon">Хакатон</div>
+                    <div class="event-image">
+                        <img src="images/10.jpg" alt="AI Hackathon 2024">
+                    </div>
+                    <div class="event-content">
+                        <h3 class="event-title">AI Hackathon 2024</h3>
+                        <p class="event-description">48-часовой хакатон по искусственному интеллекту и машинному обучению. Призы от ведущих IT-компаний.</p>
+                        <div class="event-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> Санкт-Петербург</span>
+                            <span><i class="fas fa-users"></i> 500 участников</span>
+                        </div>
+                        <a href="#" class="btn btn-outline">Подробнее</a>
+                    </div>
+                </article>
+                
+                <article class="event-card">
+                    <div class="event-date">
+                        <span class="date-day">12</span>
+                        <span class="date-month">Ноя</span>
+                    </div>
+                    <div class="event-category category-meetup">Митап</div>
+                    <div class="event-image">
+                        <img src="images/3.jpg" alt="DevOps Meetup">
+                    </div>
+                    <div class="event-content">
+                        <h3 class="event-title">DevOps Meetup #25</h3>
+                        <p class="event-description">Ежемесячная встреча DevOps-инженеров. Обмен опытом, кейсы и новинки инструментов.</p>
+                        <div class="event-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> Москва, офис Яндекс</span>
+                            <span><i class="fas fa-users"></i> 120 участников</span>
+                        </div>
+                        <a href="#" class="btn btn-outline">Подробнее</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
 
-            <div id="Education"><strong><h2>Образование</h2></strong>
-            <p><strong>Школа: </strong>МБОУ лицей "Технический" имени С.П.Королёва - среднее общее, 11 классов<br>
-            <strong>Период обучения: </strong>09.2013 г. - 05.2024 г.<br>
-            <strong>Университет:</strong> РТУ МИРЭА, Программная инженерия, 2 курс<br>
-            <ol>
-                <li>Разработка веб-страницы шоколадной фабрики</li>
-                <li>Подтверждение уровня английского B2</li>
-                <li>Прохождение курса по Kotlin</li>
-                <li>Прохождение курса по Frontend-разработке</li>
-                <li>Программирование на Python, Java, C++</li>
-                <li>Участие в проекте "Академия дизайна"</li>
-                <li>Стажировка дизайнером в Киберзоне РТУ МИРЭА</li>
-            </ol>
-            </p>
+    <!-- Блок новостей с Flexbox -->
+    <section class="news" id="news">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Последние новости</h2>
+                <a href="#" class="section-link">Все новости <i class="fas fa-arrow-right"></i></a>
             </div>
-            <div id="Work"><strong><h2>Опыт работы</h2></strong>
-            <p><strong>Место работы: </strong>Киберзона РТУ МИРЭА<br>
-            <strong>Должность: </strong>Дизайнер<br>
-            <strong>Выполняемые задачи: </strong><br>
-            <ol>
-                <li>Дизайн превью для видео</li>
-                <li>Дизайн карточек для постов</li>
-                <li>Дизайн печатной продукции</li>
-                <li>Дизайн баннеров для мероприятий</li>
-            </ol>
-            <em>Примеры работ:</em><br>
-            <img src="Снимок экрана 2025-10-06 091912.png" alt="Работа" width="300">
-            <img src="Угадай про.png" alt="Работа" width="300"></p>
+            
+            <div class="news-flex">
+                <article class="news-card featured">
+                    <div class="news-image">
+                        <img src="images/4.jpg" alt="Новый фреймворк от Meta">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="news-category">Технологии</span>
+                            <span class="news-date"><i class="far fa-clock"></i> 2 часа назад</span>
+                        </div>
+                        <h3 class="news-title">Meta анонсировала новый фреймворк для веб-разработки</h3>
+                        <p class="news-excerpt">Компания Meta представила новый инструмент для создания высокопроизводительных веб-приложений...</p>
+                        <a href="news.html" class="btn btn-text">Читать далее <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                
+                <div class="news-sidebar">
+                    <article class="news-item">
+                        <div class="news-item-content">
+                            <div class="news-meta">
+                                <span class="news-category">Образование</span>
+                                <span class="news-date"><i class="far fa-clock"></i> 5 часов назад</span>
+                            </div>
+                            <h4 class="news-item-title">Новый курс по Quantum Computing на Coursera</h4>
+                            <p class="news-item-excerpt">МФТИ запустил бесплатный курс по квантовым вычислениям для программистов...</p>
+                        </div>
+                    </article>
+                    
+                    <article class="news-item">
+                        <div class="news-item-content">
+                            <div class="news-meta">
+                                <span class="news-category">Карьера</span>
+                                <span class="news-date"><i class="far fa-clock"></i> Вчера</span>
+                            </div>
+                            <h4 class="news-item-title">Рынок IT-специалистов вырос на 25% в 2024 году</h4>
+                            <p class="news-item-excerpt">Согласно исследованию HeadHunter, спрос на разработчиков продолжает расти...</p>
+                        </div>
+                    </article>
+                    
+                    <article class="news-item">
+                        <div class="news-item-content">
+                            <div class="news-meta">
+                                <span class="news-category">Стартапы</span>
+                                <span class="news-date"><i class="far fa-clock"></i> 2 дня назад</span>
+                            </div>
+                            <h4 class="news-item-title">Российский стартап привлек $10 млн инвестиций</h4>
+                            <p class="news-item-excerpt">Компания, разрабатывающая AI-инструменты для медицины, завершила раунд финансирования...</p>
+                        </div>
+                    </article>
+                </div>
             </div>
-            <section id="Contacts"><strong><h2>Обратная связь</h2></strong></section>
-            <p><strong>Телефон: </strong><a href="tel:89277466479">89277466479</a><br>
-            <strong>Почта: </strong><a href="mailto:christina.nogacheva@yandex.ru">christina.nogacheva@yandex.ru</a><br>
-            <strong>GitHub: </strong><a href="https://github.com/christofiaa">christofiaa</a>
-            </p>
-        </main>
-    </body>
+        </div>
+    </section>
+
+    <!-- О нас -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <h2 class="section-title">О TechEvents</h2>
+                <p class="about-text">Мы - крупнейшая платформа для поиска и организации IT-мероприятий в России и СНГ. Наша цель - объединить IT-сообщество, предоставляя доступ к самым актуальным конференциям, воркшопам, хакатонам и митапам.</p>
+                <p class="about-text">С 2018 года мы помогли организовать более 1000 мероприятий и собрали аудиторию в 50,000+ IT-специалистов.</p>
+                <div class="about-stats">
+                    <div class="about-stat">
+                        <span class="about-stat-number">1000+</span>
+                        <span class="about-stat-label">Мероприятий</span>
+                    </div>
+                    <div class="about-stat">
+                        <span class="about-stat-number">50k+</span>
+                        <span class="about-stat-label">Пользователей</span>
+                    </div>
+                    <div class="about-stat">
+                        <span class="about-stat-number">85%</span>
+                        <span class="about-stat-label">Положительных отзывов</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo">
+                        <a href="index.html">
+                            <i class="fas fa-code"></i>
+                            <span>TechEvents</span>
+                        </a>
+                    </div>
+                    <p class="footer-text">Крупнейшая платформа IT-мероприятий в России и СНГ.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-title">Навигация</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="#events">Мероприятия</a></li>
+                        <li><a href="#news">Новости</a></li>
+                        <li><a href="#about">О нас</a></li>
+                        <li><a href="news.html">Пример новости</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-title">Категории</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Конференции</a></li>
+                        <li><a href="#">Воркшопы</a></li>
+                        <li><a href="#">Хакатоны</a></li>
+                        <li><a href="#">Митапы</a></li>
+                        <li><a href="#">Онлайн-ивенты</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-title">Контакты</h4>
+                    <ul class="footer-contacts">
+                        <li><i class="fas fa-map-marker-alt"></i> Москва, ул. Ленина, 10</li>
+                        <li><i class="fas fa-phone"></i> +7 (999) 123-45-67</li>
+                        <li><i class="fas fa-envelope"></i> info@techevents.ru</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 TechEvents. Все права защищены.</p>
+                <p>Сайт создан в учебных целях</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Мобильное меню
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+            document.querySelector('.nav-actions').classList.toggle('active');
+        });
+        
+        // Плавная прокрутка для якорных ссылок
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Закрытие мобильного меню после клика
+                    document.querySelector('.nav-menu').classList.remove('active');
+                    document.querySelector('.nav-actions').classList.remove('active');
+                }
+            });
+        });
+        
+        // Эффект при скролле для header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
 </html>
